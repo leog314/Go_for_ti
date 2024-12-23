@@ -1,7 +1,5 @@
 The code for the game was written in Lua. Note that it can only be used on Ti-nspire calculators (mainly the cx cas and cx cas II).
-Work is still in progress, mistakes in the game logic can occure. 
-
-Note: suicude isn`t prohibited yet. 
+Work is still in progress, mistakes in the game logic may occure. 
 
 If you want to edit the source code and recompile it you should use the Luna compiler from .lua to .tns: https://github.com/ndless-nspire/Luna
 
