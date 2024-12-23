@@ -1,8 +1,8 @@
-sq_sz = 156
+sq_sz = 180
 bsize = 19
 spsq = sq_sz/(bsize-1)
 
-csize = 0.9*spsq
+csize = 0.8*spsq
 
 rxm = platform.window:width()+5
 rym = platform.window:height()+5
@@ -173,7 +173,7 @@ function on.paint(gc)
     fx = (fd-1)%bsize
     fy = math.floor((fd-fx-1)/bsize+0.5)
 
-    gc:drawArc(spsq*fx+edgx-0.3*csize, spsq*fy+edgy-0.3*csize, 0.6*csize, 0.6*csize, 0, 360)
+    gc:drawArc(spsq*fx+edgx-0.25*csize, spsq*fy+edgy-0.25*csize, 0.5*csize, 0.5*csize, 0, 360)
 end
 
 function on.mouseDown(x, y)
