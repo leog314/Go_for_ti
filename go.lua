@@ -1,5 +1,5 @@
 sq_sz = 156
-bsize = 13
+bsize = 19
 spsq = sq_sz/(bsize-1)
 
 csize = 0.9*spsq
