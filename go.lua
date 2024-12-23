@@ -16,14 +16,14 @@ function make_board()
         a[i]=0.
     end
 
-    a[bsize*bsize+1]=1
-    a[bsize*bsize+2]=-1
-    a[bsize*bsize+3]=2
+    a[bsize*bsize+1]=1 -- to_move
+    a[bsize*bsize+2]=-1 -- last played move
+    a[bsize*bsize+3]=2 -- stores the unasigned value
 
     return a
 end
 
-function deep_copy(a)
+function deep_copy(a) -- creates a copy of an object (i.e. board)
     local b = {}
     for _, v in pairs(a) do
         table.insert(b, v)
@@ -31,7 +31,7 @@ function deep_copy(a)
     return b
 end
 
-function is_in(list, element)
+function is_in(list, element) -- checks if certain element is in table
     for _, v in pairs(list) do
         if v==element then
             return true
@@ -83,7 +83,7 @@ function is_legal(boa, ind)
 
     for i=1, bsize*bsize do
         if boa[i]~=0 then
-            if (i ~= ind) and (#count_liberties(boa, i, {}, {})==0) then
+            if (i ~= ind) and (#count_liberties(boa, i, {}, {})==0) and (boa[i] == -boa[ind]) then
                 table.insert(removals, {i, boa[i]})
             end
         end
@@ -197,7 +197,7 @@ function on.mouseDown(x, y)
 
     for field=1, bsize*bsize do
         if board[field]~=0 then
-            if (#count_liberties(board, field, {}, {})==0) and (field~=board[bsize*bsize+2]) then
+            if (#count_liberties(board, field, {}, {})==0) and (field~=board[bsize*bsize+2]) and (board[field]==-board[f+1])then
                 table.insert(removals, field)
             end
         end
