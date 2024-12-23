@@ -7,4 +7,4 @@ If you want to edit the source code and recompile it you should use the Luna com
 
 Also see: https://education.ti.com/html/eguides/nspire/EG_Nspire/EN/content/eg_lua/m_libraries/m_libraries.HTML?tocpath=TI-Nspire%E2%84%A2%20Technology%20eGuide%7CProgramming%7CTI-Nspire%E2%84%A2%20Lua%20Scripting%7CLua%20Scripting%20API%20Reference%7C_____0
 
-![alt text](https://github.com/leog314/Go_for_ti/go_picture.jpg?raw=true)
+![alt text]((https://github.com/leog314/Go_for_ti/blob/main/go_picture.jpg)?raw=true)
